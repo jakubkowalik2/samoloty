@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
         <div>{{date | date : 'fullDate'}}</div>
-        <div>{{weather?.the_temp}}stopnjiC</div>
+        <div>{{weather?.the_temp | number : '0.0-0'}}°C</div>
 
         <img *ngIf="this.weatherImageUrl !== ''" src="{{this.weatherImageUrl}}" alt="weather?.weather_state_abbr" width="40" height="40">
     </nav>

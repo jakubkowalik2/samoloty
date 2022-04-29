@@ -14,7 +14,6 @@ export class DateAndWeatherComponent implements OnInit {
   weather: IConsolidatedWeather | undefined;
   woeid: number = 0;
   weatherImageUrl: string = "";
-
   constructor(private httpClient: HttpClient) { 
   }
 
