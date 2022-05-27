@@ -1,6 +1,18 @@
-<select class="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
+<div class="row">
+    <div class="col">
+        <div ngbDropdown>
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedStart}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem *ngFor="let startCity of startCities" (click)="onSelectedStartCity(startCity)" >{{startCity}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div ngbDropdown>
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{selectedDestination}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+            <button ngbDropdownItem *ngFor="let destinationCity of destinationCities" (click)="onSelectedDestinationCity(destinationCity)" >{{destinationCity}}</button>
+          </div>
+        </div>
+    </div>
+</div>
