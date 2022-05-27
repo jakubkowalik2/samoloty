@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DateAndWeatherComponent } from './components/date-and-weather/date-and-weather.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StartDestinationComponent } from './components/start-destination/start-destination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DateAndWeatherComponent
+    DateAndWeatherComponent,
+    StartDestinationComponent
   ],
   imports: [
     BrowserModule,
