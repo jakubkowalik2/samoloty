@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, } from '@angular/core';
+
 
 @Component({
   selector: 'app-start-destination',
@@ -7,8 +7,7 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./start-destination.component.scss']
 })
 export class StartDestinationComponent implements OnInit {
-  // @ViewChild(NgbDropdown, { static: true })
-  // public dropdown: NgbDropdown;
+
 
   selectedStart = 'Start'
   selectedDestination = 'Destination'
@@ -23,14 +22,10 @@ export class StartDestinationComponent implements OnInit {
   }
 
   onSelectedStartCity(city: string) : void {
-    console.log(city)
     this.selectedStart = city;
   }
 
   onSelectedDestinationCity(city: string) : void {
-    console.log(city)
     this.selectedDestination = city;
   }
-
-
 }

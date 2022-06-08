@@ -1,0 +1,21 @@
+<div>Baggage size</div>
+<div class="btn-group" dropdown>
+    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle mb-3"
+            aria-controls="dropdown-basic">
+            {{selectedBaggage}} <span class="caret"></span>
+    </button>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" *ngFor="let baggage of baggages" (click)="onSelectedBaggage(baggage)">{{baggage}}</a></li>
+    </ul>
+</div>
+
+<div>Seats</div>
+<div *ngIf="seats" >
+    <input *ngFor="let seat of seats" type="number"
+    placeholder="Seat"
+    min="1" max="48"
+    class="form-control">
+</div>
+
+

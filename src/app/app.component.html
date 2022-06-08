@@ -1,7 +1,15 @@
 <app-date-and-weather></app-date-and-weather>
 
-<div class="row d-flex justify-content-center start-destination">
-    <div class="col-md-6 ">
-        <app-start-destination></app-start-destination>
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-md-6">
+        <app-start-destination class="p-3"></app-start-destination>
+        <app-date-and-passengers (numberOfPassengersChange)="numberOfPassengers=$event"></app-date-and-passengers>
+        <button type="button" class="btn btn-primary mt-3 mb-3" (click)="onContinue()">
+            Continue 
+        </button>
+
+        <div *ngIf="showFlightDetails">
+            <app-baggage-and-seats [seats]="numberOfPassengers"></app-baggage-and-seats>
+        </div>
     </div>
 </div>

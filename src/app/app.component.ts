@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'samoloty';
+
+  numberOfPassengers! : Array<number>;
+  showFlightDetails = false;
+
+  onContinue() : void{
+    console.log("tu kiedys bedzie logowanie sie ")
+    this.showFlightDetails = true;
+  }
 }

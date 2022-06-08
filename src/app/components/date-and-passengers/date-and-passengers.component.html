@@ -1,0 +1,19 @@
+
+<div class="p-2">
+    <div>Date of flight</div>
+    <input type="text"
+    placeholder="Date of flight"
+    class="form-control"
+    bsDatepicker [bsConfig]="bsConfig"
+    [(ngModel)]="dateOfFlight">
+</div>
+
+<div class="p-2">
+    <div>Number of passengers</div>
+    <input type="number"
+    placeholder="Number of passengers"
+    min="1" max="8"
+    class="form-control"
+    [(ngModel)]="numberOfPassengers"
+    (change)="onPassengersChange()">
+</div>

@@ -1,18 +1,30 @@
 <div class="row">
     <div class="col">
-        <div ngbDropdown>
-            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedStart}}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem *ngFor="let startCity of startCities" (click)="onSelectedStartCity(startCity)" >{{startCity}}</button>
-            </div>
+        <div>Start</div>
+        <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                    aria-controls="dropdown-basic">
+                    {{selectedStart}} <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" *ngFor="let startCity of startCities" (click)="onSelectedStartCity(startCity)">{{startCity}}</a></li>
+            </ul>
         </div>
     </div>
+
+
     <div class="col">
-        <div ngbDropdown>
-          <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{selectedDestination}}</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-            <button ngbDropdownItem *ngFor="let destinationCity of destinationCities" (click)="onSelectedDestinationCity(destinationCity)" >{{destinationCity}}</button>
-          </div>
+        <div>Destination</div>
+        <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                    aria-controls="dropdown-basic">
+                    {{selectedDestination}} <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" *ngFor="let destinationCity of destinationCities" (click)="onSelectedDestinationCity(destinationCity)">{{destinationCity}}</a></li>
+            </ul>
         </div>
     </div>
 </div>
